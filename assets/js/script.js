@@ -1,7 +1,3 @@
-// Bloom — Week Project Settimana V
-//
-// Aggiungi qui il codice JavaScript se serve (es. modale, scroll handler).
-// Per la Versione Base spesso non serve niente: tutto si fa in CSS.
 
 const overlay = document.querySelector('.overlay');
 const apriContatti = document.querySelector('#open-modal');
@@ -12,6 +8,8 @@ const darkModeToggle = document.querySelector('#dark-mode-toggle');
 
 const tutteLeSezioni = document.querySelectorAll('#site-main section');
 const navLinks = document.querySelectorAll('.site-nav a');
+
+const header = document.querySelector('header');
 
 
 apriContatti.addEventListener("click", (e) => {
@@ -57,4 +55,10 @@ myForm.addEventListener("submit", (e) => {
 
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
+});
+
+
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
 });

@@ -3,7 +3,9 @@
 
 
 /* Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -13,6 +15,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #1a1a1a;
+  background-color: #fafafa;
 }
 
 img {
@@ -27,3 +30,88 @@ a {
 
 
 /* Aggiungi qui le tue regole, mobile-first. */
+
+.logo {
+  color: hsl(150, 60%, 30%);
+  font-weight: bold;
+}
+
+header {
+  background-color:  #fafafa;
+  border-bottom: 1px solid #eee;
+
+  /* .logo {
+    color: hsl(150, 60%, 30%);
+    font-weight: bold;
+  } */
+
+  .sun-icon {
+    display: none;
+  }
+
+  #dark-mode-toggle {
+    border-style: none;
+    border: 1px solid #DDDDDD;
+    background-color: #fafafa;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+
+    li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+      a {
+        &:hover {
+          background-color: hsl(150, 60%, 95%);
+          color: hsl(150, 60%, 30%);
+          padding: 8px;
+        }
+      }
+}
+
+.hero {
+  color:#fafafa;
+  background-color: hsl(150, 60%, 30%);
+  
+  /* h1 {
+    
+  } */
+
+  .cta-btn {
+    border-style: none;
+    background-color: #fafafa;
+    padding: 10px 18px;
+    border-radius: 25px;
+    color:hsl(150, 60%, 30%);
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.section-title, .modal-title {
+  color: hsl(150, 60%, 30%);
+}
+
+.avatar {
+  display: flex;
+  background-color: hsl(150, 60%, 30%);
+  width: 60px;
+  height: 60px;
+  color: #fafafa;
+  font-weight: 600;
+  border-radius: 50%;
+
+    span {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+}
+
+
+
+

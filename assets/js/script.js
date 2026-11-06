@@ -10,6 +10,7 @@ const tutteLeSezioni = document.querySelectorAll('#site-main section');
 const navLinks = document.querySelectorAll('.site-nav a');
 
 const header = document.querySelector('header');
+const carousel = document.querySelector('.testimonial-carousel');
 
 
 apriContatti.addEventListener("click", (e) => {
@@ -61,4 +62,21 @@ darkModeToggle.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+
+const testimonialCard = document.querySelectorAll('.testimonial-card');
+
+testimonialCard.forEach((card) => {
+	card.addEventListener('mouseover', (e) => {
+		e.preventDefault();
+		card.setAttribute('id', 'cardHover');
+	});
+});
+
+testimonialCard.forEach((card) => {
+	card.addEventListener('mouseout', (e) => {
+		e.preventDefault();
+		card.removeAttribute('id');
+	});
 });

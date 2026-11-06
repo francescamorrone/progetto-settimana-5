@@ -51,7 +51,7 @@
         <p class="hero-description" id="hero-description">
           Siamo uno studio creativo. Identità visiva, web e motion graphic per chi vuole farsi notare.
         </p>
-        <button type="button" class="cta-btn btn" id="hero-cta">Richiedi preventivo</button>
+        <button type="button" class="cta-btn btn" id="hero-cta" id="open-modal">Richiedi preventivo</button>
       </section>
 
       <!--projects section-->
@@ -270,9 +270,10 @@
   </footer>
   </div>
 
+<div id="modal-contatti" class="overlay" hidden>
   <div class="modal">
 
-    <button type="button" class="close-button" aria-label="Chiudi il modulo di contatto">
+    <button type="button" id="close-modal" aria-label="Chiudi il modulo di contatto">
       &times;
     </button>
 
@@ -312,6 +313,8 @@
       <button type="submit" class="btn btn-submit">Invia richiesta</button>
     </form>
   </div>
+</div>
+
   <script src="assets/js/script.js"></script>
 </body>
 

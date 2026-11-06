@@ -8,6 +8,10 @@ const apriContatti = document.querySelector('#open-modal');
 const chiusiContatti = document.querySelector('#close-modal');
 const myForm = document.querySelector('.modal-form');
 const submitForm = document.querySelector(".btn-submit");
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+const tutteLeSezioni = document.querySelectorAll('#site-main section');
+const navLinks = document.querySelectorAll('.site-nav a');
 
 
 apriContatti.addEventListener("click", (e) => {
@@ -49,4 +53,8 @@ myForm.addEventListener("submit", (e) => {
         myForm.reset();
         successMsg.setAttribute("hidden", "");
     }, 3000);
+});
+
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
 });

@@ -11,16 +11,18 @@
 
 <body>
 
-  <header id="site-header">
+<header id="site-header">
+  <div class="header-container">
+    
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="bloom homepage">
+      <span class="logo-icon"><i class="fa-solid fa-seedling"></i></span>
+      <span class="logo-text">Bloom</span>
+    </a>
 
-    <div class="header-container">
-      <!-- Logo -->
-      <a href="#" class="logo" aria-label="bloom homepage">
-        <span class="logo-icon"><i class="fa-solid fa-seedling"></i></span>
-        <span class="logo-text">Bloom</span>
-      </a>
-
-      <!--Navigazione-->
+    <div class="nav-wrapper">
+      
+      <!-- Navigazione -->
       <nav class="site-nav" aria-label="navigation">
         <ul>
           <li><a href="#servizi">Servizi</a></li>
@@ -29,16 +31,15 @@
           <li><a href="#contatti">Contatti</a></li>
         </ul>
       </nav>
-    </div>
 
-    <!--Dark mode toggle-->
-    <button type="button" id="dark-mode-toggle" aria-label="Attiva/disattiva modalità scura" data-theme="light">
-      <!--moon icon-->
-      <span class="moon-icon"><i class="fa-solid fa-moon"></i></span>
-      <!--sun icon-->
-      <span class="sun-icon"><i class="fa-solid fa-sun"></i></span>
-    </button>
-  </header>
+      <button type="button" id="dark-mode-toggle" aria-label="Attiva/disattiva modalità scura" data-theme="light">
+        <span class="moon-icon"><i class="fa-solid fa-moon"></i></span>
+        <span class="sun-icon"><i class="fa-solid fa-sun"></i></span>
+      </button>
+
+    </div>
+  </div>
+</header>
 
   <main id="site-main">
     <div class="container">
@@ -57,22 +58,22 @@
       <section class="projects-section">
         <h2 class="section-title">I nostri lavori</h2>
 
-        <article class="card-project">
+        <article class="card-project card">
           <img src="https://img.magnific.com/vettori-premium/modello-di-social-media-di-instagram_1153643-240.jpg" />
         </article>
-        <article class="card-project">
+        <article class="card-project card">
           <img src="https://img.magnific.com/vettori-premium/modello-di-social-media-di-instagram_1153643-240.jpg" />
         </article>
-        <article class="card-project">
+        <article class="card-project card">
           <img src="https://img.magnific.com/vettori-premium/modello-di-social-media-di-instagram_1153643-240.jpg" />
         </article>
-        <article class="card-project">
+        <article class="card-project card">
           <img src="https://img.magnific.com/vettori-premium/modello-di-social-media-di-instagram_1153643-240.jpg" />
         </article>
-        <article class="card-project">
+        <article class="card-project card">
           <img src="https://img.magnific.com/vettori-premium/modello-di-social-media-di-instagram_1153643-240.jpg" />
         </article>
-        <article class="card-project">
+        <article class="card-project card">
           <img src="https://img.magnific.com/vettori-premium/modello-di-social-media-di-instagram_1153643-240.jpg" />
         </article>
       </section>
@@ -81,19 +82,19 @@
         <h2 class="section-title">I nostri servizi</h2>
         <div class="services-list">
 
-          <article class="service-card">
+          <article class="service-card card">
             <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
             <h3>Identità visiva</h3>
             <p>Logo, palette, tipografia e linee guida per un brand coerente, riconoscibile e duraturo.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card card">
             <div class="service-icon"><i class="fa-solid fa-display"></i></div>
             <h3>Web design</h3>
             <p>Siti vetrina e landing page responsive, accessibili e ottimizzate per dispositivi mobili.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card card">
             <div class="service-icon"><i class="fa-solid fa-film"></i></div>
             <h3>Motion graphic</h3>
             <p>Animazioni e brevi video per raccontare il prodotto, i social e le campagne pubblicitarie.</p>
@@ -106,7 +107,7 @@
         <h2 class="section-title">Il nostro team</h2>
         <div class="team-list">
 
-          <article class="team-member">
+          <article class="team-member card">
             <div class="avatar">
               <span class="initials">GR</span>
             </div>
@@ -116,7 +117,7 @@
             <p class="bio">Cura l'identità visiva dei progetti, dal concept alla consegna finale.</p>
           </article>
 
-          <article class="team-member">
+          <article class="team-member card">
             <div class="avatar">
               <span class="initials">MB</span>
             </div>
@@ -126,7 +127,7 @@
             <p class="bio">Progetta interfacce responsive e accessibili, con un occhio al codice.</p>
           </article>
 
-          <article class="team-member">
+          <article class="team-member card">
             <div class="avatar">
               <span class="initials">SV</span>
             </div>
@@ -144,7 +145,7 @@
 
         <div class="testimonial-carousel">
 
-          <div class="testimonial-card">
+          <div class="testimonial-card card">
             <div class="avatar">
               <span class="initials">
                 EC
@@ -154,68 +155,95 @@
               <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</p>
             </blockquote>
-            <cite class="testimonial-name">Elena Conti </cite>
-            <span class="testimonial-company">- Studio Conti</span>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="avatar">
-              <span class="initials">
-                EC
-              </span>
+            <div class="signature">
+              <cite class="testimonial-name">Elena Conti </cite>
+              <span class="testimonial-company">- Studio Conti</span>
             </div>
-            <blockquote>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
-            </blockquote>
-            <cite class="testimonial-name">Elena Conti </cite>
-            <span class="testimonial-company">- Studio Conti</span>
           </div>
-
-          <div class="testimonial-card">
-            <div class="avatar">
-              <span class="initials">
-                EC
-              </span>
-            </div>
-            <blockquote>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
-            </blockquote>
-            <cite class="testimonial-name">Elena Conti </cite>
-            <span class="testimonial-company">- Studio Conti</span>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="avatar">
-              <span class="initials">
-                EC
-              </span>
-            </div>
-            <blockquote>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
-            </blockquote>
-            <cite class="testimonial-name">Elena Conti </cite>
-            <span class="testimonial-company">- Studio Conti</span>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="avatar">
-              <span class="initials">
-                EC
-              </span>
-            </div>
-            <blockquote>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
-            </blockquote>
-            <cite class="testimonial-name">Elena Conti </cite>
-            <span class="testimonial-company">- Studio Conti</span>
-          </div>
-
 
         </div>
+
+        <div class="testimonial-carousel">
+
+          <div class="testimonial-card card">
+            <div class="avatar">
+              <span class="initials">
+                EC
+              </span>
+            </div>
+            <blockquote>
+              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            </blockquote>
+            <div class="signature">
+              <cite class="testimonial-name">Elena Conti </cite>
+              <span class="testimonial-company">- Studio Conti</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-carousel">
+
+          <div class="testimonial-card card">
+            <div class="avatar">
+              <span class="initials">
+                EC
+              </span>
+            </div>
+            <blockquote>
+              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            </blockquote>
+            <div class="signature">
+              <cite class="testimonial-name">Elena Conti </cite>
+              <span class="testimonial-company">- Studio Conti</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-carousel">
+
+          <div class="testimonial-card card">
+            <div class="avatar">
+              <span class="initials">
+                EC
+              </span>
+            </div>
+            <blockquote>
+              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            </blockquote>
+            <div class="signature">
+              <cite class="testimonial-name">Elena Conti </cite>
+              <span class="testimonial-company">- Studio Conti</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-carousel">
+
+          <div class="testimonial-card card">
+            <div class="avatar">
+              <span class="initials">
+                EC
+              </span>
+            </div>
+            <blockquote>
+              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            </blockquote>
+            <div class="signature">
+              <cite class="testimonial-name">Elena Conti </cite>
+              <span class="testimonial-company">- Studio Conti</span>
+            </div>
+          </div>
+
+        </div>
+
+
       </section>
 
   </main>
@@ -231,12 +259,14 @@
     </div>
 
     <nav class="footer-nav">
-      <ul>
-        <li aria-label="Instagram"><i class="fa-brands fa-instagram"></i></li>
-        <li aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></li>
-        <li aria-label="Behance"><i class="fa-brands fa-behance"></i></li>
+      <ul class="social-icons">
+        <li aria-label="Instagram"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li aria-label="LinkedIn"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li aria-label="Behance"><a href="#"><i class="fa-brands fa-behance"></i></a></li>
       </ul>
     </nav>
+
+    <p class="copyright">© 2026 Bloom</p>
   </footer>
   </div>
 
@@ -254,24 +284,12 @@
     <form class="modal-form">
       <div class="form-group">
         <label for="contact-name">Nome</label>
-        <input 
-          type="text" 
-          id="contact-name" 
-          name="name" 
-          placeholder="Mario Rossi" 
-          required 
-        >
+        <input type="text" id="contact-name" name="name" placeholder="Mario Rossi" required>
       </div>
 
       <div class="form-group">
         <label for="contact-email">Email</label>
-        <input 
-          type="email" 
-          id="contact-email" 
-          name="email" 
-          placeholder="nome@azienda.com" 
-          required 
-        >
+        <input type="email" id="contact-email" name="email" placeholder="nome@azienda.com" required>
       </div>
 
       <div class="form-group">
@@ -287,13 +305,8 @@
 
       <div class="form-group">
         <label for="contact-message">Messaggio</label>
-        <textarea 
-          id="contact-message" 
-          name="message" 
-          rows="4" 
-          placeholder="Descrivi i tuoi obiettivi..."
-          required
-        ></textarea>
+        <textarea id="contact-message" name="message" rows="4" placeholder="Descrivi i tuoi obiettivi..."
+          required></textarea>
       </div>
 
       <button type="submit" class="btn btn-submit">Invia richiesta</button>

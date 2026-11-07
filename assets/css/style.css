@@ -107,7 +107,8 @@ body,
 
 .card-project,
 .service-card,
-.team-member {
+.team-member, 
+.testimonial-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
@@ -475,92 +476,70 @@ header {
 }
 
 /* RECENSIONI */
-/* .reviews-section {
+.reviews-section {
+  max-width: none;  
+  padding-inline: 0;
   overflow: hidden;
 
-  blockquote {
-    font-style: italic;
-    color: #555;
+  .section-title {
+    padding-inline: 20px;
   }
 
-  .signature {
+
+  .testimonial-carousel {
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  }
+
+
+  .testimonial-track {
     display: flex;
+    width: max-content;
+    padding: 10px 0 30px;
+    animation: carousel-scroll 30s linear infinite;
+  }
+
+  .testimonial-carousel:hover .testimonial-track {
+    animation-play-state: paused;
+  }
+
+  .testimonial-card {
+    flex: 0 0 320px;
+    margin-right: 24px;
+
+    .avatar {
+      margin-bottom: 16px;
+    }
+
+    blockquote {
+      margin: 0 0 16px;
+      font-style: italic;
+      color: #555;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .signature {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
+    }
 
     .testimonial-name {
       font-style: normal;
       font-weight: bold;
     }
+
+    .testimonial-company {
+      color: #777;
+    }
   }
-
-  .testimonial-carousel {
-    display: flex;
-    gap: 20px;
-    width: max-content;
-    padding: 10px 20px 30px 0;
-    align-self: flex-start;
-
-    &:hover {
-      animation-play-state: paused;
-    }
-
-    .testimonial-carousel div:nth-child(2) {
-      animation-delay: 2.5s;
-    }
-
-    .testimonial-carousel div:nth-child(3) {
-      animation-delay: 5s;
-    }
-
-    
-
-    .testimonial-card {
-      flex: 0 0 320px;
-      position: absolute;
-      right: 0;
-      opacity: 0%;
-      border-radius: 50%;
-      animation: testimonial-card 10s linear infinite;
-      transition:
-        border-radius 500ms,
-        width 500ms;
-    }
-    @keyframes testimonial-card {
-	0% {
-		opacity: 0%;
-		filter: grayscale(100%);
-		right: 0;
-	}
-	20% {
-		opacity: 50%;
-		filter: grayscale(50%);
-		right: 20%;
-	}
-	40% {
-		opacity: 100%;
-		filter: grayscale(0%);
-		right: 40%;
-	}
-	60% {
-		right: 60%;
-	}
-	80% {
-		opacity: 50%;
-		filter: grayscale(50%);
-		right: 80%;
-	}
-	100% {
-		opacity: 0%;
-		filter: grayscale(100%);
-		right: 100%;
-	}
 }
-
-  }
-} */
-
-/* @media (min-width: 768px) {
-  max-width: 100%;
-} */
 
 
 
@@ -796,6 +775,9 @@ body.dark {
   background-color: #121212;
   color: #f5f5f5;
 
+  .reviews-section blockquote { color: #bbb; }
+  .testimonial-company { color: #aaa; }
+
   header {
     background-color: #0a0a0a;
 
@@ -907,4 +889,12 @@ body.dark {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  .testimonial-carousel {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+  .testimonial-track { animation: none; }
+  .testimonial-card[aria-hidden="true"] { display: none; }
 }
